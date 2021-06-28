@@ -13,16 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return "Olá Mundo";
-// });
-// Route::get('/sobre-nos', function () {
-//     return "Sobre Nós";
-// });
-// Route::get('/contato', function () {
-//     return "Contato";
-// });
+Route::get('/', 'PrincipalController@principal')->name('site.index');
+Route::get('/sobre-nos', 'SobreNosController@sobreNos')->name('site.sobrenos');
+Route::get('/contato', 'ContatoController@contato')->name('site.contato');
+Route::get('/login', function(){return 'Login';})->name('site.login');
 
-Route::get('/','PrincipalController@principal');
-Route::get('/sobre-nos','SobreNosController@sobreNos');
-Route::get('/contato','ContatoController@contato');
+Route::prefix('/app')->group(function(){
+    Route::get('/clientes', function(){return 'Clientes';})->name('app.clientes');
+    Route::get('/fornecedores', 'FornecedorController@index')->name('app.fornecedores');
+    Route::get('/produtos', function(){return 'produtos';})->name('app.produtos');
+});
+
+Route::fallback(function() {
+    echo 'A rota acessada não existe. <a href="'.route('site.index').'">clique aqui</a> para ir para página inicial';
+});
