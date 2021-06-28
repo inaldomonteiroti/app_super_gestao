@@ -113,7 +113,7 @@
             .conteudo-destaque {
                 width: 100%;
                 height: 100%;
-                min-height: 800px; 
+                min-height: 800px;
             }
 
             .esquerda {
@@ -207,7 +207,7 @@
 
             <div class="menu">
                 <ul>
-                    <li><a href="{{ route('site.index') }}">Principal</a></li>
+                    <li><a href="{{ route('site.principal') }}">Principal</a></li>
                     <li><a href="{{ route('site.sobrenos') }}">Sobre Nós</a></li>
                     <li><a href="{{ route('site.contato') }}">Contato</a></li>
                 </ul>
@@ -240,7 +240,7 @@
                         <button type="submit" class="borda-preta">ENVIAR</button>
                     </form>
                 </div>
-            </div>  
+            </div>
         </div>
 
         <div class="rodape">
