@@ -13,6 +13,7 @@
 
             <div class="informacao-pagina">
                 <div class="contato-principal">
+
                     @component('site.layouts._components.form_contato')
                     <p>A nossa equipe analisará a sua mensagem para brevemente atende-lo</p>
                     @endcomponent

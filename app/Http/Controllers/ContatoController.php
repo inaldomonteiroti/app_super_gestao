@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class ContatoController extends Controller
 {
-    public function contato(){
-        var_dump($_GET);
+    public function contato(Request $request){
+        dd($request);
         return view('site.contato');
     }
 }
