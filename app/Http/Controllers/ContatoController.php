@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class ContatoController extends Controller
 {
     public function contato(Request $request){
-        dd($request);
+
         return view('site.contato');
     }
 }
