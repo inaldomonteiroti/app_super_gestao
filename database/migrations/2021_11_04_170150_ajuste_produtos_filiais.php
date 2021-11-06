@@ -35,12 +35,12 @@ class AjusteProdutosFiliais extends Migration
             $table->foreign('produto_id')->references('id')->on('produtos');
         });
 
-         //adicionar colunas da tabela produtos
-         Schema::table('produtos', function (Blueprint $table) {
-            $table->decimal('preco_venda', 8, 2);
-            $table->integer('estoque_minimo');
-            $table->integer('estoque_maximo');
-        });
+        //  //adicionar colunas da tabela produtos
+        //  Schema::table('produtos', function (Blueprint $table) {
+        //     $table->decimal('preco_venda', 8, 2);
+        //     $table->integer('estoque_minimo');
+        //     $table->integer('estoque_maximo');
+        // });
 
 
     }
